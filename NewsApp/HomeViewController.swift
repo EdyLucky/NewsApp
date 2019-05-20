@@ -2,13 +2,13 @@
 //  ViewController.swift
 //  NewsApp
 //
-//  Created by Edy on 5/20/19.
-//  Copyright © 2019 Edy. All rights reserved.
+//  Created by Elshad on 5/20/19.
+//  Copyright © 2019 Elshad. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
