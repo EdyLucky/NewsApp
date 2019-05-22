@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A500032294076A00C909DF /* AllNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A500022294076A00C909DF /* AllNews.swift */; };
+		04A5000522958C3500C909DF /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5000422958C3400C909DF /* CustomCollectionViewCell.swift */; };
 		04A5FFED229322E100C909DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5FFEC229322E100C909DF /* AppDelegate.swift */; };
 		04A5FFEF229322E100C909DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5FFEE229322E100C909DF /* HomeViewController.swift */; };
 		04A5FFF2229322E100C909DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A5FFF0229322E100C909DF /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A500022294076A00C909DF /* AllNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNews.swift; sourceTree = "<group>"; };
+		04A5000422958C3400C909DF /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		04A5FFE9229322E100C909DF /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A5FFEC229322E100C909DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A5FFEE229322E100C909DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A5000022933EBC00C909DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A500022294076A00C909DF /* AllNews.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A5000122933ECF00C909DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A5FFEC229322E100C909DF /* AppDelegate.swift */,
+				04A5FFEE229322E100C909DF /* HomeViewController.swift */,
+				04A5000422958C3400C909DF /* CustomCollectionViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		04A5FFE0229322E100C909DF = {
 			isa = PBXGroup;
 			children = (
@@ -61,14 +83,22 @@
 		04A5FFEB229322E100C909DF /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				04A5FFEC229322E100C909DF /* AppDelegate.swift */,
-				04A5FFEE229322E100C909DF /* HomeViewController.swift */,
-				04A5FFF0229322E100C909DF /* Main.storyboard */,
+				04A5000022933EBC00C909DF /* Model */,
+				04A5FFFF22933EA600C909DF /* View */,
+				04A5000122933ECF00C909DF /* Controller */,
 				04A5FFF3229322E300C909DF /* Assets.xcassets */,
 				04A5FFF5229322E300C909DF /* LaunchScreen.storyboard */,
 				04A5FFF8229322E300C909DF /* Info.plist */,
 			);
 			path = NewsApp;
+			sourceTree = "<group>";
+		};
+		04A5FFFF22933EA600C909DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A5FFF0229322E100C909DF /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2F6DAF4DA5D33AED79BC3CE9 /* Frameworks */ = {
@@ -165,11 +195,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,8 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A500032294076A00C909DF /* AllNews.swift in Sources */,
 				04A5FFEF229322E100C909DF /* HomeViewController.swift in Sources */,
 				04A5FFED229322E100C909DF /* AppDelegate.swift in Sources */,
+				04A5000522958C3500C909DF /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +387,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9QWQLP3S4;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -369,7 +406,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9QWQLP3S4;
 				INFOPLIST_FILE = NewsApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.NewsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
