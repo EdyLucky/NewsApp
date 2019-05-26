@@ -11,14 +11,14 @@ import Foundation
 class AllNews {
     
     let title : String
-    let content : String
+    let url : String
     let time : String
     let imageLink : String
     let source : String
     
-    init(pTitle : String, pContent : String, pTime : String, pImageLink : String, pSource : String ) {
+    init(pTitle : String, pUrl : String, pTime : String, pImageLink : String, pSource : String ) {
         title = pTitle
-        content = pContent
+        url = pUrl
         time = pTime
         imageLink = pImageLink
         source = pSource
